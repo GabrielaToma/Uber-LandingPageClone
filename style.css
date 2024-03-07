@@ -1,0 +1,447 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /*sa se ia in calcul padding-ul si border-ul in calcularea width si height*/
+  font-size: 10px;
+}
+/*Remember: when em units are used on font-size, the size is relative to the font-size of the parent. When used on other properties, it’s relative to the font-size of the element itself.
+*/
+
+html {
+  color: white;
+  font-size: 100%;
+}
+
+/*navigation-bar*/
+
+nav {
+  background-color: black;
+  height: 6.4em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 3em;
+}
+
+ul {
+  display: flex;
+  flex: 1;
+  list-style-type: none;
+  align-items: center;
+}
+
+li {
+  font-size: 1.6em;
+  padding: 1em;
+}
+
+.nav li {
+  transition: background-color 0.6s;
+}
+
+.nav li:hover:not(#name-c) {
+  background-color: rgb(78, 76, 76);
+  padding: 0.4em 0.7em;
+  border-radius: 0.8em;
+  cursor: pointer;
+}
+
+#name-c {
+  font-size: 2.5em;
+}
+
+.buton-signup {
+  font-weight: 600;
+  font-size: 1.3em;
+  padding: 0.8em 1em;
+  background-color: white;
+  color: black;
+  border: white;
+  border-radius: 1.8em;
+}
+
+.hamburger-button {
+  display: none;
+}
+
+/*hero-section*/
+
+.hero {
+  background-color: black;
+  display: flex;
+  align-items: center;
+  height: auto;
+  padding-top: 6em;
+  padding-bottom: 6em;
+}
+
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  height: 100%;
+  justify-content: center;
+  margin-left: 7em;
+}
+
+.hero-text h1 {
+  font-size: 5.2em;
+  margin-bottom: 0.4em;
+}
+
+.hero-text p {
+  font-size: 2em;
+  margin-bottom: 1.2em;
+}
+
+.hero-text input {
+  width: 60%;
+  min-width: 22em;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-radius: 0.5em;
+  border: none;
+  font-size: 1.6em;
+}
+
+.hero-text button {
+  width: 20%;
+  min-width: 7em;
+  padding: 1em 0.5em;
+  border-radius: 0.8em;
+  border: none;
+  font-weight: bold;
+  font-size: 1.5em;
+  margin-top: 0.6em;
+}
+
+.hero-image {
+  flex: 1;
+  margin-right: 7em;
+}
+
+.image-uber {
+  height: auto;
+  width: 100%;
+  border-radius: 7px;
+}
+
+/*section*/
+
+.section-1,
+.section-2 {
+  display: flex;
+  justify-content: center;
+  gap: 10em;
+  margin: 5em 5em;
+  background-color: white;
+  color: black;
+}
+
+.section-image {
+  flex: 1;
+}
+
+.section-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 7px;
+}
+
+.section-text {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 5em;
+}
+
+.section-text h2 {
+  font-size: 5.2em;
+  max-width: 80%;
+  margin-bottom: 0.1em;
+}
+
+.section-text p {
+  width: 20em;
+  font-size: 2em;
+  line-height: 1.8em;
+  margin: 1em 0;
+}
+
+.section-text button {
+  width: 30%;
+  color: white;
+  background-color: black;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.7em;
+  padding: 0.9em 0.4em;
+}
+
+.section-text a {
+  margin-left: 0.8em;
+  font-size: 1.8em;
+  color: black;
+  text-decoration: none;
+  border-bottom: rgb(193, 186, 186) solid 1.5px;
+  padding-bottom: 0.4em;
+}
+
+/*sectiunea 3 - DOWNLOAD APPS*/
+
+.download {
+  background-color: rgb(242, 241, 241);
+  color: black;
+  height: 40em;
+}
+
+.download h2 {
+  font-size: 3.5em;
+  padding: 1.5em 0em 1.5em 1.5em;
+}
+
+.apps {
+  display: flex;
+  justify-content: space-around;
+  height: 20em;
+  padding: 0em 4em;
+}
+
+.apps h2 {
+  font-size: 2.5em;
+  padding: 0;
+}
+
+.image-small {
+  display: none;
+}
+
+.image-full {
+  width: auto;
+  height: 15em;
+}
+
+.apps-download {
+  width: 45%;
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  align-items: center;
+  padding: 0em 3em;
+}
+
+.apps-left {
+  display: flex;
+  align-items: center;
+}
+.scan {
+  margin: 0em 1em;
+}
+
+.scan p {
+  font-size: 1.8em;
+}
+
+.apps-download .arrow p {
+  font-size: 3em;
+  transform: translateX(20%);
+  transition: 0.7s;
+}
+
+.apps-download:hover {
+  cursor: pointer;
+}
+
+.apps-download:hover .arrow p {
+  transform: translateX(70%);
+}
+
+/*footer*/
+
+footer {
+  background-color: black;
+  color: white;
+  height: auto;
+}
+
+.footer-1 {
+  height: 24em;
+  padding: 6em 3em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.footer-1 p,
+a {
+  font-size: 1.9em;
+  padding: 1em 0;
+}
+
+#link {
+  order: -1;
+  margin-left: 48em; /*nu merge float?!*/
+  font-size: 1.6em;
+}
+
+.footer-2 {
+  display: flex;
+  padding-left: 2em;
+}
+
+.footer-mini {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.footer-mini p {
+  font-size: 2em;
+  padding-left: 0.6em;
+}
+
+.footer-mini li:hover {
+  cursor: pointer;
+  color: gray;
+}
+
+/*vezi cum faci sa se duca doar sageata in dreapta!*/
+/*vezi cum sa aliniezi elementele in nav-bar
+  de facut butonul de sign-up*/
+
+@media screen and (max-width: 1000px) {
+  .ul-left li:not(#name-c) {
+    display: none;
+  }
+
+  .ul-right li:not(#log-in) {
+    display: none;
+  }
+
+  .hamburger-button {
+    display: block;
+    font-size: 1.8em;
+    background-color: rgb(88, 86, 86);
+    color: white;
+    padding: 0.4em 0.6em;
+    border: none;
+    border-radius: 1.8em;
+    margin-left: 0.7em;
+    margin-right: 0.4em;
+  }
+
+  .ul-left,
+  .ul-right {
+    margin: 0;
+  }
+
+  .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4em;
+  }
+
+  .hero-image {
+    padding: 0 4em;
+    width: 100%;
+  }
+
+  .section-1,
+  .section-2 {
+    display: flex;
+    gap: 5em;
+    margin: 3em 0;
+  }
+  .section-1 {
+    flex-direction: column-reverse;
+  }
+
+  .section-2 {
+    flex-direction: column;
+  }
+
+  .section-image {
+    min-width: 100%;
+    padding: 0 4em;
+  }
+
+  .section-text h2 p {
+    /*cum aliniez nenorocitrele alea de paragrafe????*/
+    min-width: 90%;
+  }
+
+  /*section 3 -  Downloads*/
+
+  .download {
+    height: 40em;
+  }
+  .apps {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+  }
+
+  .apps-download {
+    height: auto;
+    width: 100%;
+    justify-content: space-between;
+    padding: 2em;
+  }
+
+  .image-full {
+    display: none;
+  }
+
+  .scan p {
+    display: none;
+  }
+
+  .image-small {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+
+  /*footer*/
+
+  .footer-1 {
+    height: 24em;
+    padding: 6em 3em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  #link {
+    order: 3;
+    margin: 0;
+  }
+
+  .footer-1 p,
+  a {
+    font-size: 1.9em;
+    padding: 1em;
+  }
+
+  .footer-2 {
+    flex-direction: column;
+  }
+  .footer-mini {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding-left: 2em;
+    padding-bottom: 2.7em;
+  }
+
+  .footer-mini p {
+    font-size: 1.9em;
+    padding: 0.5em;
+    padding-bottom: 0.7em;
+  }
+
+  .footer-mini li {
+    font-size: 1.6em;
+  }
+}

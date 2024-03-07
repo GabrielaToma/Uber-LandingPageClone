@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <title>Landing page Uber</title>
+  </head>
+  <body>
+    <!--navigation bar-->
+
+    <nav class="nav">
+      <div class="ul-left">
+        <ul>
+          <li id="name-c">Uber</li>
+          <li>Company</li>
+          <li>Safety</li>
+          <li>Help</li>
+        </ul>
+      </div>
+
+      <div class="ul-right">
+        <ul>
+          <li aria-label="Choose your preffered language">EN</li>
+          <li>Products</li>
+          <li id="log-in" aria-label="Click here to log into your account">
+            Log in
+          </li>
+          <button
+            class="buton-signup"
+            type="button"
+            aria-label="Click here to sign into your account"
+          >
+            Sign up
+          </button>
+          <!--hamburger menu-->
+          <div id="hamburger-menu">
+            <button class="hamburger-button">☰</button>
+          </div>
+        </ul>
+      </div>
+    </nav>
+
+    <!--header-->
+
+    <header class="hero">
+      <div class="hero-text">
+        <h1>
+          Go anywhere with <br />
+          Uber
+        </h1>
+        <p>Request a ride, hop in, and go.</p>
+        <form action="/url" method="GET">
+          <input type="text" placeholder="Enter location" />
+        </form>
+        <form action="/url" method="GET">
+          <input type="text" placeholder="Enter destination" />
+        </form>
+        <button type="button">See prices</button>
+      </div>
+      <div class="hero-image">
+        <img class="image-uber" src="uber.png" />
+      </div>
+    </header>
+
+    <!--section 1-->
+
+    <section class="section-1">
+      <div class="section-image">
+        <img src="sofer.png" />
+      </div>
+      <div class="section-text">
+        <h2>Drive when you want, make what you need</h2>
+        <p>
+          Make money on your schedule with deliveries or rides—or both. You can
+          use your own car or choose a rental through Uber.
+        </p>
+        <div>
+          <button type="button">Get started</button>
+          <a href="" target="_blank">Already have an account? Sign in</a>
+        </div>
+      </div>
+    </section>
+
+    <!--section 2-->
+
+    <section class="section-2">
+      <div class="section-text">
+        <h2>The Uber you know, reimagined for business</h2>
+        <p>
+          Uber for Business is a platform for managing global rides and meals,
+          and local deliveries, for companies of any size.
+        </p>
+        <div>
+          <button type="button">Get started</button>
+          <a href="" target="_blank">Check out our solution</a>
+        </div>
+      </div>
+      <div class="section-image">
+        <img src="aeroport.png" />
+      </div>
+    </section>
+
+    <!--section 3-->
+
+    <section class="download">
+      <h2>It's easier in the apps</h2>
+      <div class="apps">
+        <div class="apps-download">
+          <div class="apps-left">
+            <img src="Rider-App-Icon_iOS.svg" class="image-small" />
+            <img src="scan-driver.png" class="image-full" />
+            <div class="scan">
+              <h2>Download the Uber app</h2>
+              <p>Scan to download</p>
+            </div>
+          </div>
+          <div class="arrow">
+            <p>&rarr;</p>
+          </div>
+        </div>
+
+        <div class="apps-download">
+          <div class="apps-left">
+            <div>
+              <img src="Driver-App-Icon_iOS.svg" class="image-small" />
+              <img src="scan-rider.png" class="image-full" />
+            </div>
+            <div class="scan">
+              <h2>Download the Driver app</h2>
+              <p>Scan to download</p>
+            </div>
+          </div>
+          <div class="arrow">
+            <p>&rarr;</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-1">
+        <p>Uber</p>
+        <a>Visit help center</a>
+        <a id="link">How the Uber and Uber Eats apps and websites work</a>
+      </div>
+
+      <div class="footer-2">
+        <ul class="footer-mini">
+          <p>Company</p>
+          <li>About us</li>
+          <li>Our offerings</li>
+          <li>Newsroom</li>
+          <li>Investors</li>
+          <li>Blog</li>
+          <li>Careers</li>
+          <li>AI</li>
+          <li>Gift Cards</li>
+        </ul>
+
+        <ul class="footer-mini">
+          <p>Products</p>
+          <li>Ride</li>
+          <li>Drive</li>
+          <li>Eat</li>
+          <li>Uber for business</li>
+          <li>Uber Freight</li>
+        </ul>
+
+        <ul class="footer-mini">
+          <p>Global citizenship</p>
+          <li>Safety</li>
+          <li>Diversity and inclusion</li>
+        </ul>
+
+        <ul class="footer-mini">
+          <p>Travel</p>
+          <li>Reserve</li>
+          <li>Airports</li>
+          <li>Cities</li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+</html>
