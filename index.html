@@ -7,100 +7,123 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
     <title>Landing page Uber</title>
   </head>
   <body>
+    <!--scroll to top button -->
+    <button onclick="topFunction()" id="myBtn" title="Go to top">&#8593</button>
+
     <!--navigation bar-->
-
-    <nav class="nav">
-      <div class="ul-left">
-        <ul>
-          <li id="name-c">Uber</li>
-          <li>Company</li>
-          <li>Safety</li>
-          <li>Help</li>
-        </ul>
-      </div>
-
-      <div class="ul-right">
-        <ul>
-          <li aria-label="Choose your preffered language">EN</li>
-          <li>Products</li>
-          <li id="log-in" aria-label="Click here to log into your account">
-            Log in
-          </li>
-          <button
-            class="buton-signup"
-            type="button"
-            aria-label="Click here to sign into your account"
-          >
-            Sign up
-          </button>
-          <!--hamburger menu-->
-          <div id="hamburger-menu">
-            <button class="hamburger-button">☰</button>
-          </div>
-        </ul>
+    
+    <nav class="navbar navbar-expand-lg nav-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Uber</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Features</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Pricing</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Dropdown link
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
       </div>
     </nav>
+             
 
     <!--header-->
 
-    <header class="hero">
-      <div class="hero-text">
-        <h1>
-          Go anywhere with <br />
-          Uber
-        </h1>
-        <p>Request a ride, hop in, and go.</p>
-        <form action="/url" method="GET">
-          <input type="text" placeholder="Enter location" />
-        </form>
-        <form action="/url" method="GET">
-          <input type="text" placeholder="Enter destination" />
-        </form>
-        <button type="button">See prices</button>
+    <header class="container-fluid hero">
+      <div class="row">
+        <div class="hero-text-container col-md">
+          <div class="hero-text">
+            <h1>
+              Go anywhere with <br />
+              Uber
+            </h1>
+            <p>Request a ride, hop in, and go.</p>
+            <form action="/url" method="GET">
+              <input type="text" placeholder="Enter location" />
+            </form>
+            <form action="/url" method="GET">
+              <input type="text" placeholder="Enter destination" />
+            </form>
+            <button type="button">See prices</button>
+          </div>
+        </div>
+        <div class="col-md hero-image">
+          <img class="image-uber" src="uber.png" />
+        </div>
       </div>
-      <div class="hero-image">
-        <img class="image-uber" src="uber.png" />
-      </div>
+      
     </header>
 
     <!--section 1-->
 
-    <section class="section-1">
-      <div class="section-image">
-        <img src="sofer.png" />
-      </div>
-      <div class="section-text">
-        <h2>Drive when you want, make what you need</h2>
-        <p>
-          Make money on your schedule with deliveries or rides—or both. You can
-          use your own car or choose a rental through Uber.
-        </p>
-        <div>
-          <button type="button">Get started</button>
-          <a href="" target="_blank">Already have an account? Sign in</a>
+    <section class="container-fluid section-1">
+      <div class="row reverse d-flex">
+        <div class="col-md section-image">
+          <img src="sofer.png" />
+        </div>
+        <div class="col-md d-flex align-items-center justify-content-center">
+          <div class="section-text">
+            <h2>Drive when you want, make what you need</h2>
+            <p>
+              Make money on your schedule with deliveries or rides—or both. You can
+              use your own car or choose a rental through Uber.
+            </p>
+            <div>
+              <button class="button-get-started" type="button">Get started</button>
+              <a href="" target="_blank">Already have an account? Sign in</a>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
     <!--section 2-->
 
-    <section class="section-2">
-      <div class="section-text">
-        <h2>The Uber you know, reimagined for business</h2>
-        <p>
-          Uber for Business is a platform for managing global rides and meals,
-          and local deliveries, for companies of any size.
-        </p>
-        <div>
-          <button type="button">Get started</button>
-          <a href="" target="_blank">Check out our solution</a>
+    <section class="container-fluid section-2">
+      <div class="row">
+        <div class="col-md section-text-container d-flex align-items-center justify-content-center">
+          <div class="section-text">
+            <h2>The Uber you know, reimagined for business</h2>
+            <p>
+              Uber for Business is a platform for managing global rides and meals,
+              and local deliveries, for companies of any size.
+            </p>
+            <div>
+              <button type="button">Get started</button>
+              <a href="" target="_blank">Check out our solution</a>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="section-image">
-        <img src="aeroport.png" />
+        <div class="col-md section-image">
+          <img src="aeroport.png" />
+        </div>
       </div>
     </section>
 
@@ -141,6 +164,8 @@
       </div>
     </section>
 
+    <!--footer-->
+
     <footer>
       <div class="footer-1">
         <p>Uber</p>
@@ -148,41 +173,51 @@
         <a id="link">How the Uber and Uber Eats apps and websites work</a>
       </div>
 
-      <div class="footer-2">
-        <ul class="footer-mini">
-          <p>Company</p>
-          <li>About us</li>
-          <li>Our offerings</li>
-          <li>Newsroom</li>
-          <li>Investors</li>
-          <li>Blog</li>
-          <li>Careers</li>
-          <li>AI</li>
-          <li>Gift Cards</li>
-        </ul>
-
-        <ul class="footer-mini">
-          <p>Products</p>
-          <li>Ride</li>
-          <li>Drive</li>
-          <li>Eat</li>
-          <li>Uber for business</li>
-          <li>Uber Freight</li>
-        </ul>
-
-        <ul class="footer-mini">
-          <p>Global citizenship</p>
-          <li>Safety</li>
-          <li>Diversity and inclusion</li>
-        </ul>
-
-        <ul class="footer-mini">
-          <p>Travel</p>
-          <li>Reserve</li>
-          <li>Airports</li>
-          <li>Cities</li>
-        </ul>
+      <div class="container-fluid footer-2">
+        <div class="row">
+          <ul class="col-md-6 col-lg-3 footer-mini">
+            <p>Company</p>
+            <li>About us</li>
+            <li>Our offerings</li>
+            <li>Newsroom</li>
+            <li>Investors</li>
+            <li>Blog</li>
+            <li>Careers</li>
+            <li>AI</li>
+            <li>Gift Cards</li>
+          </ul>
+  
+          <ul class="col-md-6 col-lg-3 footer-mini">
+            <p>Products</p>
+            <li>Ride</li>
+            <li>Drive</li>
+            <li>Eat</li>
+            <li>Uber for business</li>
+            <li>Uber Freight</li>
+          </ul>
+  
+          <ul class="col-md-6 col-lg-3 footer-mini">
+            <p>Global citizenship</p>
+            <li>Safety</li>
+            <li>Diversity and inclusion</li>
+            <li>Sustainability</li>
+          </ul>
+  
+          <ul class="col-md-6 col-lg-3 footer-mini">
+            <p>Travel</p>
+            <li>Reserve</li>
+            <li>Airports</li>
+            <li>Cities</li>
+          </ul>
+        </div>
       </div>
     </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
   </body>
 </html>

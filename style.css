@@ -1,87 +1,69 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; /*sa se ia in calcul padding-ul si border-ul in calcularea width si height*/
+  box-sizing: border-box;
   font-size: 10px;
 }
-/*Remember: when em units are used on font-size, the size is relative to the font-size of the parent. When used on other properties, it’s relative to the font-size of the element itself.
-*/
 
 html {
-  color: white;
+  background-color: black;
   font-size: 100%;
 }
 
-/*navigation-bar*/
-
-nav {
-  background-color: black;
-  height: 6.4em;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 3em;
-}
-
-ul {
-  display: flex;
-  flex: 1;
-  list-style-type: none;
-  align-items: center;
-}
-
-li {
-  font-size: 1.6em;
-  padding: 1em;
-}
-
-.nav li {
-  transition: background-color 0.6s;
-}
-
-.nav li:hover:not(#name-c) {
-  background-color: rgb(78, 76, 76);
-  padding: 0.4em 0.7em;
-  border-radius: 0.8em;
-  cursor: pointer;
-}
-
-#name-c {
-  font-size: 2.5em;
-}
-
-.buton-signup {
-  font-weight: 600;
-  font-size: 1.3em;
-  padding: 0.8em 1em;
+/*scroll to top button*/
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99; /* Make sure it does not overlap */
+  border: none;
+  outline: none;
   background-color: white;
   color: black;
-  border: white;
-  border-radius: 1.8em;
+  cursor: pointer;
+  padding: 2px 18px;
+  border-radius: 30px;
+  font-size: 33px;
 }
 
-.hamburger-button {
-  display: none;
+#myBtn:hover {
+  background-color: #555; /* Add a dark-grey background on hover */
 }
+
+/*navigation bar*/
 
 /*hero-section*/
 
 .hero {
   background-color: black;
-  display: flex;
-  align-items: center;
   height: auto;
   padding-top: 6em;
   padding-bottom: 6em;
 }
 
+.hero-text-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .hero-text {
+  color: white;
   display: flex;
   flex-direction: column;
-  flex: 1;
-  height: 100%;
   justify-content: center;
-  margin-left: 7em;
+  margin-bottom: 5em;
+  animation: fadeInSection 5s;
+}
+
+@keyframes fadeInSection {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .hero-text h1 {
@@ -95,8 +77,8 @@ li {
 }
 
 .hero-text input {
-  width: 60%;
-  min-width: 22em;
+  width: 50%;
+  min-width: 20em;
   padding: 1em;
   margin-bottom: 1em;
   border-radius: 0.5em;
@@ -116,13 +98,14 @@ li {
 }
 
 .hero-image {
-  flex: 1;
-  margin-right: 7em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .image-uber {
   height: auto;
-  width: 100%;
+  width: 90%;
   border-radius: 7px;
 }
 
@@ -130,20 +113,18 @@ li {
 
 .section-1,
 .section-2 {
-  display: flex;
-  justify-content: center;
-  gap: 10em;
   margin: 5em 5em;
   background-color: white;
   color: black;
 }
 
 .section-image {
-  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
 .section-image img {
-  width: 100%;
+  width: 90%;
   height: auto;
   border-radius: 7px;
 }
@@ -176,12 +157,12 @@ li {
   border: none;
   border-radius: 10px;
   font-size: 1.7em;
-  padding: 0.9em 0.4em;
+  padding: 0.8em 0.3em;
 }
 
 .section-text a {
-  margin-left: 0.8em;
-  font-size: 1.8em;
+  margin-left: 0.9em;
+  font-size: 1.7em;
   color: black;
   text-decoration: none;
   border-bottom: rgb(193, 186, 186) solid 1.5px;
@@ -266,28 +247,34 @@ footer {
 }
 
 .footer-1 {
-  height: 24em;
-  padding: 6em 3em;
+  padding: 6em 6em 3em 6em;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  position: relative;
+}
+
+.footer-1 p,
+a,
+.footer-mini p {
+  font-size: 1.9em;
 }
 
 .footer-1 p,
 a {
-  font-size: 1.9em;
-  padding: 1em 0;
+  padding-bottom: 1em;
+  margin: 0;
 }
 
 #link {
-  order: -1;
-  margin-left: 48em; /*nu merge float?!*/
+  position: absolute;
+  right: 3em;
+  top: 2em;
   font-size: 1.6em;
 }
 
-.footer-2 {
-  display: flex;
-  padding-left: 2em;
+div.footer-2 {
+  margin: 3em 5em;
 }
 
 .footer-mini {
@@ -295,80 +282,35 @@ a {
   align-items: flex-start;
 }
 
-.footer-mini p {
-  font-size: 2em;
-  padding-left: 0.6em;
-}
-
 .footer-mini li:hover {
   cursor: pointer;
   color: gray;
 }
 
-/*vezi cum faci sa se duca doar sageata in dreapta!*/
-/*vezi cum sa aliniezi elementele in nav-bar
-  de facut butonul de sign-up*/
+.footer-mini li {
+  list-style-type: none;
+  font-size: 1.6em;
+  line-height: 2em;
+}
 
 @media screen and (max-width: 1000px) {
-  .ul-left li:not(#name-c) {
-    display: none;
-  }
-
-  .ul-right li:not(#log-in) {
-    display: none;
-  }
-
-  .hamburger-button {
-    display: block;
-    font-size: 1.8em;
-    background-color: rgb(88, 86, 86);
-    color: white;
-    padding: 0.4em 0.6em;
-    border: none;
-    border-radius: 1.8em;
-    margin-left: 0.7em;
-    margin-right: 0.4em;
-  }
-
-  .ul-left,
-  .ul-right {
-    margin: 0;
-  }
-
-  .hero {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 4em;
-  }
-
-  .hero-image {
-    padding: 0 4em;
-    width: 100%;
-  }
-
   .section-1,
   .section-2 {
-    display: flex;
-    gap: 5em;
     margin: 3em 0;
   }
-  .section-1 {
+
+  .reverse {
     flex-direction: column-reverse;
   }
 
-  .section-2 {
-    flex-direction: column;
+  .button-get-started {
+    display: block;
+    margin-bottom: 1em;
   }
 
   .section-image {
     min-width: 100%;
-    padding: 0 4em;
-  }
-
-  .section-text h2 p {
-    /*cum aliniez nenorocitrele alea de paragrafe????*/
-    min-width: 90%;
+    padding: 2em 4em;
   }
 
   /*section 3 -  Downloads*/
@@ -405,43 +347,11 @@ a {
 
   /*footer*/
 
-  .footer-1 {
-    height: 24em;
-    padding: 6em 3em;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-  }
-
   #link {
-    order: 3;
-    margin: 0;
+    position: static;
   }
 
-  .footer-1 p,
-  a {
-    font-size: 1.9em;
-    padding: 1em;
-  }
-
-  .footer-2 {
-    flex-direction: column;
-  }
   .footer-mini {
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    padding-left: 2em;
-    padding-bottom: 2.7em;
-  }
-
-  .footer-mini p {
-    font-size: 1.9em;
-    padding: 0.5em;
-    padding-bottom: 0.7em;
-  }
-
-  .footer-mini li {
-    font-size: 1.6em;
+    margin-bottom: 4em;
   }
 }
