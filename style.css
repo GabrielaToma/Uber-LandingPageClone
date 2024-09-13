@@ -5,9 +5,14 @@
   font-size: 10px;
 }
 
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 html {
   background-color: black;
-  font-size: 100%;
 }
 
 /*scroll to top button*/
@@ -28,10 +33,72 @@ html {
 }
 
 #myBtn:hover {
-  background-color: #555; /* Add a dark-grey background on hover */
+  background-color: #555;
 }
 
 /*navigation bar*/
+
+div.container-fluid {
+  margin: 0 3em;
+}
+
+div.container-fluid a.navbar-brand {
+  font-size: 2.7em;
+  margin-bottom: 3px;
+}
+
+div.container-fluid a {
+  color: white;
+  font-size: 1.5em;
+  margin-right: 1.5em;
+}
+
+nav ul.dropdown-menu {
+  padding: 0.5em 1.5em 0 0;
+  border-radius: 0;
+}
+
+div.collapse {
+  position: relative;
+  margin-top: 2px;
+}
+
+nav a#help {
+  position: absolute;
+  right: -25px; /*to position the help button on the right side of the nav bar*/
+}
+
+nav ul.dropdown-menu a.dropdown-item {
+  background-color: white;
+  color: gray;
+}
+
+nav ul.dropdown-menu a.dropdown-item:hover {
+  background-color: rgb(248, 245, 245);
+  color: black;
+}
+
+nav ul.right-nav {
+  width: 170px;
+  gap: 3em;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+nav ul.right-nav li {
+  color: white;
+  list-style-type: none;
+  font-size: 1.5em;
+  margin-top: 10px;
+}
+
+nav ul.right-nav button {
+  border: none;
+  padding: 0.4em 0.7em;
+  border-radius: 1.2em;
+  font-weight: 400;
+}
 
 /*hero-section*/
 
@@ -174,7 +241,8 @@ html {
 .download {
   background-color: rgb(242, 241, 241);
   color: black;
-  height: 40em;
+  height: auto;
+  padding-bottom: 3em;
 }
 
 .download h2 {
@@ -185,7 +253,7 @@ html {
 .apps {
   display: flex;
   justify-content: space-around;
-  height: 20em;
+  height: auto;
   padding: 0em 4em;
 }
 
@@ -244,10 +312,11 @@ footer {
   background-color: black;
   color: white;
   height: auto;
+  padding-bottom: 2em;
 }
 
 .footer-1 {
-  padding: 6em 6em 3em 6em;
+  padding: 5em 6em 3em 6em;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -293,7 +362,57 @@ div.footer-2 {
   line-height: 2em;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 990px) {
+  /*navigation bar*/
+  ul.right-nav {
+    position: absolute;
+    right: 70px;
+    top: -2px;
+  }
+
+  button.navbar-toggler {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    padding: 8px 13px; /*to switch positions between the hamburber menu and the ul.right-nav*/
+  }
+
+  div.collapse {
+    border: 1px solid gray;
+    border-radius: 10px;
+    padding: 1em;
+  }
+
+  div.collapse a.nav-link {
+    color: rgb(181, 173, 173);
+  }
+
+  div.collapse a.nav-link:hover {
+    color: white;
+  }
+
+  /*nav dropdown menu*/
+  nav ul.dropdown-menu {
+    background-color: black;
+    border-left: 1px solid gray;
+  }
+
+  nav ul.dropdown-menu a.dropdown-item {
+    background-color: black;
+  }
+
+  nav ul.dropdown-menu a.dropdown-item:hover {
+    background-color: black;
+    color: white;
+  }
+
+  /*help button*/
+  nav a#help {
+    position: static;
+  }
+
+  /*section*/
+
   .section-1,
   .section-2 {
     margin: 3em 0;
@@ -315,9 +434,6 @@ div.footer-2 {
 
   /*section 3 -  Downloads*/
 
-  .download {
-    height: 40em;
-  }
   .apps {
     display: flex;
     flex-direction: column;
